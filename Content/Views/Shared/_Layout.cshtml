@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="~/wwwroot/libs/jquery-ui/jquery-ui.min.js" rel="stylesheet" />
+    <link href="~/wwwroot/libs/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
 
     <link href="~/wwwroot/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -42,7 +42,7 @@
 
     @RenderSection("scripts", required: false)
 </head>
-<body>
+<body ng-app="main" ng-controller="rootController" ng-init="initialize()">
     @RenderBody()
 </body>
 </html>

@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Content</RootNamespace>
     <AssemblyName>Content</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -75,6 +76,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -83,8 +85,7 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
@@ -103,9 +104,7 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
@@ -123,6 +122,7 @@
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -141,7 +141,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CheckerController.cs" />
+    <Compile Include="Controllers\ParentController.cs" />
     <Compile Include="Controllers\SecureController.cs" />
+    <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -160,6 +163,22 @@
     <Content Include="wwwroot\app\controllers\rootController.js" />
     <Content Include="wwwroot\app\route.js" />
     <Content Include="wwwroot\app\services\rootService.js" />
+    <Content Include="wwwroot\css\Check.css" />
+    <Content Include="wwwroot\css\Form.css" />
+    <Content Include="wwwroot\css\Home.css" />
+    <Content Include="wwwroot\css\List.css" />
+    <Content Include="wwwroot\css\Location.css" />
+    <Content Include="wwwroot\css\Navcss.css" />
+    <Content Include="wwwroot\css\Register.css" />
+    <Content Include="wwwroot\css\Securecss.css" />
+    <Content Include="wwwroot\img\BG-SMS.jpg" />
+    <Content Include="wwwroot\img\brand\Checker.png" />
+    <Content Include="wwwroot\img\brand\Driver.png" />
+    <Content Include="wwwroot\img\brand\Home.jpg" />
+    <Content Include="wwwroot\img\brand\Icon.png" />
+    <Content Include="wwwroot\img\brand\Logo-Recovered.png" />
+    <Content Include="wwwroot\img\brand\Parent.png" />
+    <Content Include="wwwroot\img\brand\Staff.png" />
     <Content Include="wwwroot\js\app-script.js" />
     <Content Include="wwwroot\libs\angularjs\angular-animate.js" />
     <Content Include="wwwroot\libs\angularjs\angular-animate.min.js" />
@@ -363,8 +382,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\app\directives\" />
-    <Folder Include="wwwroot\css\" />
-    <Folder Include="wwwroot\img\brand\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppSetting.json" />
@@ -407,6 +424,27 @@
     <Content Include="wwwroot\libs\angularjs\angular-sanitize.min.js.map" />
     <Content Include="wwwroot\libs\angularjs\angular-touch.min.js.map" />
     <Content Include="wwwroot\libs\angularjs\angular.min.js.map" />
+    <Content Include="Views\Shared\_LayoutChecker.cshtml" />
+    <Content Include="Views\Shared\_LayoutParent.cshtml" />
+    <Content Include="Views\Shared\_LayoutStaff.cshtml" />
+    <Content Include="Views\Checker\CHK_Home.cshtml" />
+    <Content Include="Views\Checker\CHK_Morning.cshtml" />
+    <Content Include="Views\Checker\CHK_Today.cshtml" />
+    <Content Include="Views\Checker\CHK_Toschool.cshtml" />
+    <Content Include="Views\Checker\CHK_History.cshtml" />
+    <Content Include="Views\Staff\STF_Home.cshtml" />
+    <Content Include="Views\Staff\STF_Checker_Add.cshtml" />
+    <Content Include="Views\Staff\STF_Driver_Add.cshtml" />
+    <Content Include="Views\Staff\STF_Mark_Location.cshtml" />
+    <Content Include="Views\Staff\STF_Schoolbus.cshtml" />
+    <Content Include="Views\Staff\STF_Student.cshtml" />
+    <Content Include="Views\Staff\STF_Student_Add.cshtml" />
+    <Content Include="Views\Staff\STF_Student_Add1.cshtml" />
+    <Content Include="Views\Parent\PR_Home.cshtml" />
+    <Content Include="Views\Parent\PR_Cancel.cshtml" />
+    <Content Include="Views\Parent\PR_History.cshtml" />
+    <Content Include="Views\Parent\PR_Location.cshtml" />
+    <Content Include="Views\Parent\PR_Today.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

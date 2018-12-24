@@ -13,7 +13,7 @@
     $httpProvider.interceptors.push(function ($q, $rootScope) {
         return {
             request: function (config) {
-                loadingOn();
+                $(".loading").show();
                 $rootScope.errorList = [];
 
                 var body = document.body,
@@ -29,8 +29,7 @@
                 pendingRequest--;
                 if (pendingRequest <= 0) {
                     pendingRequest = 0;
-                    //$(".loading").hide();
-                    loadingOff();
+                    $(".loading").hide();
                 }
 
                 if ($rootScope.errorList == undefined) {
@@ -45,8 +44,7 @@
                 pendingRequest--;
                 if (pendingRequest <= 0) {
                     pendingRequest = 0;
-                    //$(".loading").hide();
-                    loadingOff();
+                    $(".loading").hide();
                 }
 
                 if ($rootScope.errorList == undefined) {
@@ -71,8 +69,7 @@
 
                 if (pendingRequest <= 0) {
                     pendingRequest = 0;
-                    //$(".loading").hide();
-                    loadingOff();
+                    $(".loading").hide();
                 }
 
                 if ($rootScope.errorList == undefined) {
