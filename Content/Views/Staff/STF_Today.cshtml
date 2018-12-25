@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "การรับส่งวันนี้";
+    Layout = "~/Views/Shared/_LayoutStaff.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/wwwroot/css/Check.css" />
+</head>
+
+<body>
+    <div class="container-table">
+        <h1>การรับส่งวันนี้</h1>
+        <br />
+        <div class="search">
+            <input type="button" style="background-color:white;" class="btn btn-list" value="รถคันที่"  >
+            <select id="search" name="search" class="select-search">
+                <option value="klong1">คลอง 1-4</option>
+                <option value="klong4">คลอง 4-6</option>
+            </select>
+            <button type="button" class="btn btn-dark btn-list">ค้นหา</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ลำดับ</th>
+                    <th>ชื่อ</th>
+                    <th>รอบเช้า</th>
+                    <th>รอบเย็น</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a>1</a>
+                    </td>
+                    <td>
+                        <a>สหรัฐ สุดเจริญ</a>
+                    </td>
+                    <td>
+                        <div class="column5">
+                            <button type="button" class="btn btn-success btn-show-stf">รับแล้ว</button>
+                        </div>
+                        <div class="column5">
+                            <button type="button" class="btn btn-success btn-show-stf">ถึงโรงเรียน</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="column5">
+                            <button type="button" class="btn btn-success btn-show-stf">รับแล้ว</button>
+                        </div>
+                        <div class="column5">
+                            <button type="button" class="btn btn-success btn-show-stf">ถึงบ้าน</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a>2</a></td>
+                    <td><a>นวพรรษ สุดเจริญ</a></td>
+                    <td>
+                        <div class="column5">
+                            <button type="button" class="btn btn-danger btn-show-stf">ไม่ได้รับ</button>
+                        </div>
+                        @*<div class="column5">
+                                <button type="button" class="btn btn-danger btn-show">ไม่ได้รับ</button>
+                            </div>*@
+                    </td>
+                    <td>
+                        <div class="column5">
+                            <button type="button" class="btn btn-danger btn-show-stf">ไม่ได้รับ</button>
+                        </div>
+                        @*<div class="column5">
+                                <button type="button" class="btn btn-success btn-check">รับแล้ว</button>
+                            </div>*@
+
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+

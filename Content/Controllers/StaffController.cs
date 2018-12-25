@@ -13,6 +13,30 @@ namespace Content.Controllers
         {
             return View();
         }
+        public ActionResult STF_Today()
+        {
+            return View();
+        }
+        public ActionResult STF_Toschool()
+        {
+            return View();
+        }
+        public ActionResult STF_History()
+        {
+            return View();
+        }
+        public ActionResult STF_History_Static()
+        {
+            return View();
+        }
+        public ActionResult STF_History_Info()
+        {
+            return View();
+        }
+        public ActionResult STF_Location()
+        {
+            return View();
+        }
         public ActionResult STF_Student()
         {
             return View();

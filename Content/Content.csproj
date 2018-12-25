@@ -445,6 +445,10 @@
     <Content Include="Views\Parent\PR_History.cshtml" />
     <Content Include="Views\Parent\PR_Location.cshtml" />
     <Content Include="Views\Parent\PR_Today.cshtml" />
+    <Content Include="Views\Staff\STF_Today.cshtml" />
+    <Content Include="Views\Staff\STF_Toschool.cshtml" />
+    <Content Include="Views\Staff\STF_History.cshtml" />
+    <Content Include="Views\Staff\STF_History_Info.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
