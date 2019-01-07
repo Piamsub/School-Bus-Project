@@ -26,10 +26,17 @@ namespace Content.Controllers
             return View();
         }
 
-        public ActionResult Authen(UserAuthenDTO authen)
+        //public ActionResult Authen(UserAuthenDTO authen)
+        //{
+        //    ServiceProvider.AuthenticationService.UserAuthentication(authen);
+        //    return Content(JsonConvert.SerializeObject(""), "application/json");
+        //}
+
+        public ActionResult Initialize()
         {
-            ServiceProvider.AuthenticationService.UserAuthentication(authen);
-            return Content(JsonConvert.SerializeObject(""), "application/json");
+            //string shit = "SHIT!";
+            userDTO user = ServiceProvider.AuthenticationService.GetUser();
+            return Content(JsonConvert.SerializeObject(user), "application/json");
         }
     }
 }

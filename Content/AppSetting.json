@@ -1,9 +1,9 @@
 ﻿{
   "Server": {
-    "Server_Name": "Server_Name",
-    "Server_Username": "Server_Username",
-    "Server_Password": "Server_Password",
-    "Database_Name": "Database_Name"
+    "Server_Name": "DESKTOP-1L63A51\\SQLEXPRESS",
+    "Server_Username": "",
+    "Server_Password": "",
+    "Database_Name": "SchoolBusDB"
   },
   "Session": {
     "Timeout": 43200

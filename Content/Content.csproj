@@ -77,6 +77,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SqlClient, Version=4.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.6.0\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -140,6 +143,7 @@
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CheckerController.cs" />
     <Compile Include="Controllers\ParentController.cs" />
@@ -159,9 +163,13 @@
     </Content>
     <Content Include="wwwroot\app\angular-configurations.js" />
     <Content Include="wwwroot\app\angular.module.js" />
+    <Content Include="wwwroot\app\controllers\adminController.js" />
+    <Content Include="wwwroot\app\controllers\authenController.js" />
     <Content Include="wwwroot\app\controllers\baseController.js" />
     <Content Include="wwwroot\app\controllers\rootController.js" />
     <Content Include="wwwroot\app\route.js" />
+    <Content Include="wwwroot\app\services\adminService.js" />
+    <Content Include="wwwroot\app\services\authenService.js" />
     <Content Include="wwwroot\app\services\rootService.js" />
     <Content Include="wwwroot\css\Check.css" />
     <Content Include="wwwroot\css\Form.css" />
@@ -449,6 +457,17 @@
     <Content Include="Views\Staff\STF_Toschool.cshtml" />
     <Content Include="Views\Staff\STF_History.cshtml" />
     <Content Include="Views\Staff\STF_History_Info.cshtml" />
+    <Content Include="Views\Admin\AD_Checker_Reg.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Admin\AD_Driver_Reg.cshtml" />
+    <Content Include="Views\Admin\AD_Home.cshtml" />
+    <Content Include="Views\Admin\AD_Parent_Reg.cshtml" />
+    <Content Include="Views\Admin\AD_School_Reg.cshtml" />
+    <Content Include="Views\Admin\AD_Staff_Reg.cshtml" />
+    <Content Include="Views\Admin\AD_Checker.cshtml" />
+    <Content Include="Views\Admin\AD_Driver.cshtml" />
+    <Content Include="Views\Admin\AD_Parent.cshtml" />
+    <Content Include="Views\Admin\AD_School.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

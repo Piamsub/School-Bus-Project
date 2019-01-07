@@ -3,5 +3,15 @@
     ViewBag.Title = "SignIn";
 }
 
-<h2>SignIn</h2>
+<script src="~/wwwroot/app/services/authenService.js"></script>
+<script src="~/wwwroot/app/controllers/authenController.js"></script>
 
+@*ng-init="testAlert()"*@
+
+<div ng-controller="authenController" ng-init="testAlert2()">
+    {{user.id}} {{user.Firstname}} {{user.Lastname}}
+
+    <button class="btn btn-primary">Submit</button>
+</div>
+
+@*ng-click="testAlert2()"*@

@@ -40,7 +40,7 @@ namespace Common.Helpers
         {
             get
             {
-                return "dasdsadasdsad";
+                return "Server=" + this.Server_Name + ";Database=" + this.Database_Name + ";Trusted_Connection=True";
             }
         }
     }
